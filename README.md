@@ -19,12 +19,14 @@ can be downloaded from [the Azul website](https://www.azul.com/downloads-new/?ve
     ./gradlew init
     
     ./gradlew jar
-    
-    java -jar build/libs/swapi-search-cli-1.0-SNAPSHOT.jar
 
 ### Running the App
 
-The app assumes that your SocketIO backend is running on the default URI of http://localhost:3000. If not,
+Run the following command to start the app:
+
+    java -jar build/libs/swapi-search-cli-1.0-SNAPSHOT.jar 
+
+The app assumes that your Socket.io backend is running on the default URI of http://localhost:3000. If not,
 the URI can be specified on the command line:
 
     java -jar build/libs/swapi-search-cli-1.0-SNAPSHOT.jar "<your URI>"
@@ -38,8 +40,8 @@ You will need Docker installed.
 ### Building the Docker Image
 
 A Dockerfile is included in this repo under docker/Dockerfile. It creates an image with a JDK and git installed, 
-automatically pulls down the code in this repo, and builds the code. Later on we will interactively run the container
-to use the app that it builds.
+automatically pulls down the code in this repo, and builds the output jar for the app. Later on we will interactively
+run the container to use the app.
 
 To build:
 
